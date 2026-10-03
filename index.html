@@ -1,0 +1,568 @@
+const reasons = [
+  'Your smile is my favorite thing in the world.',
+  'You make my whole heart feel safe.',
+  'You are ridiculously cute when you try to act tough.',
+  'You know exactly how to make me laugh even on bad days.',
+  'You are my comfort and my peace.',
+  'Your love makes everything feel softer and better.',
+  'You are beautiful in every way and I mean that deeply.',
+  'You make even ordinary moments feel special.',
+  'I love how you always make time for me.',
+  'You are the sweetest person I know.',
+  'Your hugs feel like home.',
+  'You are so caring even when you try to hide it.',
+  'I love your silly little habits.',
+  'You listen to me like no one else does.',
+  'I love how you understand me without me saying too much.',
+  'You make my heart feel so full.',
+  'You are my favorite person to be around.',
+  'I love how you protect my heart without trying too hard.',
+  'You make everything better just by being there.',
+  'You are my happy place.',
+  'Your love is my favorite kind of magic.',
+  'You make my world brighter just by being in it.',
+  'I love your goofy side.',
+  'You are the best thing that ever happened to me.',
+  'You make my life better every single day.',
+  'I love how much you care.',
+  'You are my calm in the middle of chaos.',
+  'I love hearing your laugh.',
+  'You make my heart race in the best way.',
+  'I love how you look at me like I matter.',
+  'You are my favorite person to cuddle with.',
+  'I love your warmth.',
+  'You are my safe place.',
+  'You are my forever favorite person.',
+  'I love the way you make life feel lighter.',
+  'You are so lovable it hurts.',
+  'You make me feel wanted and loved.',
+  'Your presence makes me feel calm.',
+  'I love your little teasing and the sweetness behind it.',
+  'I love how patient you are with me.',
+  'You are my comfort blanket and my best friend.',
+  'I love the way you keep me grounded.',
+  'You are the best part of my life.',
+  'I love your voice when you say my name.',
+  'You are my biggest blessing.',
+  'I love how much you love me.',
+  'You are my dream and my reality.',
+  'I love the way you keep me smiling.',
+  'You are so sweet and I am obsessed with it.',
+  'You are my favorite chapter in life.',
+  'I love every part of you, inside and out.',
+  'You are my all-time favorite person.',
+  'I love you in a way that feels endless.',
+  'You make my world feel complete.',
+  'You are my forever person.',
+  'I love you deeply, quietly, and endlessly.',
+  'You make my heart feel like home.',
+  'Your love is the greatest blessing I have.',
+  'I love your little silly comments.',
+  'You are too lovable and it is unfair.',
+  'You make my life feel more beautiful.',
+  'I love your sweetness and your strength.',
+  'You are my softest place to land.',
+  'I love your kind heart.',
+  'You are my forever soft spot.',
+  'I love that you are my person.',
+  'You are my favorite adventure.',
+  'Your love makes me stronger.',
+  'I love how safe and happy you make me feel.',
+  'You are my favorite person in the universe.',
+  'I love your little ways of showing love.',
+  'You are the softness I needed.',
+  'I love how good you are to me.',
+  'You are my forever and always.',
+  'You are the nice part of my day.',
+  'I love your energy and your heart.',
+  'You make my life a million times better.',
+  'I love your face more than I should.',
+  'You are my sweetest distraction.',
+  'I love how much warmth you bring into my life.',
+  'I love your smile, your laugh, your eyes.',
+  'You make my heart skip in the best way.',
+  'I love how comforting you are.',
+  'You are my baby and my favorite person.',
+  'I love how much I cherish you.',
+  'You are the kind of love I never want to lose.',
+  'You are my love story.',
+  'I love how you always notice me.',
+  'You are my reason to believe in beautiful things.',
+  'I love you more than I can say and more than I can show.',
+  'You are my dream person.',
+  'You make my heart feel soft and warm.',
+  'I love how real and special our connection is.',
+  'You are my grounding force.',
+  'I love how much you make me smile.',
+  'You are my sweetest habit.',
+  'You make my life feel magical.',
+  'You are the best boyfriend in the whole world.',
+  'I love every second I get with you.',
+  'You are my sweetest person.',
+  'I love the way you hold my heart gently.',
+  'You are my forever favorite person.',
+  'You are my one and only favorite person.',
+  'I love you more than words can say.',
+  'You make my soul feel happy.',
+  'You are my lucky charm.',
+  'I love your sweet little quirks.',
+  'You turn ordinary moments into memories.',
+  'I love how much you care about me.',
+  'You make my day better with one message.',
+  'You are my favorite thought in the middle of the day.',
+  'I love how much I trust you.',
+  'You make my heart feel safe and full.',
+  'You are my baby forever.'
+];
+
+const container = document.getElementById('loveReasons');
+const reasonsList = [];
+
+for (let i = 0; i < 1000; i++) {
+  const reason = reasons[i % reasons.length];
+  reasonsList.push(`<li><strong>${i + 1}.</strong> ${reason}</li>`);
+}
+
+if (container) container.innerHTML = reasonsList.join('');
+
+const playlist = [
+  { title: 'Baby Now That I Found You', src: 'music/track-1.mp3' },
+  { title: 'Perfect', src: 'music/track-2.mp3' },
+  { title: 'Can’t Help Falling in Love', src: 'music/track-3.mp3' },
+  { title: 'We Fell in Love in October', src: 'music/track-4.mp3' },
+  { title: 'Enchanted', src: 'music/track-5.mp3' }
+];
+
+const audio = document.getElementById('bgMusic');
+let currentTrackIndex = 0;
+
+function setTrack(index) {
+  currentTrackIndex = index;
+  if (!audio) return;
+  audio.src = playlist[index].src;
+  audio.load();
+  audio.play().catch(() => {});
+}
+
+function nextTrack() {
+  const nextIndex = (currentTrackIndex + 1) % playlist.length;
+  setTrack(nextIndex);
+}
+
+function playPlaylist() {
+  if (!playlist.length || !audio) return;
+  setTrack(0);
+}
+
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+  if (audio) {
+    audio.volume = 0.45;
+  }
+});
+
+document.addEventListener('click', playPlaylist, { once: true });
+
+if (audio) {
+  audio.addEventListener('ended', nextTrack);
+}
+
+const envelope = document.getElementById('envelope');
+const openButton = document.getElementById('openButton');
+
+if (openButton && envelope) {
+  openButton.addEventListener('click', () => {
+    envelope.classList.add('open');
+    setTimeout(() => {
+      envelope.style.opacity = '0';
+      envelope.style.pointerEvents = 'none';
+    }, 650);
+  });
+}
+
+const floatingLayer = document.querySelector('.floating-layer');
+
+function createFloatingElement(type) {
+  const element = document.createElement('div');
+  element.className = type === 'star' ? 'sparkle' : type === 'heart' ? 'heart' : 'kiss';
+  element.textContent = type === 'star' ? '' : type === 'heart' ? '❤' : '💋';
+
+  const left = Math.random() * window.innerWidth;
+  const duration = 8 + Math.random() * 8;
+
+  element.style.left = `${left}px`;
+  element.style.animationDuration = `${duration}s`;
+
+  if (type === 'star') {
+    const s = 8 + Math.random() * 10;
+    element.style.width = `${s}px`;
+    element.style.height = `${s}px`;
+  } else {
+    element.style.fontSize = `${14 + Math.random() * 14}px`;
+  }
+
+  if (floatingLayer) floatingLayer.appendChild(element);
+
+  setTimeout(() => element.remove(), duration * 1000 + 200);
+}
+
+setInterval(() => {
+  const roll = Math.random();
+  if (roll < 0.45) createFloatingElement('star');
+  else if (roll < 0.8) createFloatingElement('heart');
+  else createFloatingElement('kiss');
+}, 650);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

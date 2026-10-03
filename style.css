@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Baby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="bgMusic" autoplay preload="auto"></audio>
+
+    <div class="floating-layer" aria-hidden="true"></div>
+
+    <div class="page-shell">
+      <header class="hero">
+        <p class="intro-line">Here's something special for you</p>
+        <h1>For My Baby</h1>
+        <p class="tagline">A little bit of love, a little bit of magic ✨</p>
+      </header>
+
+      <main>
+        <section class="letter-section">
+          <div class="paper-letter">
+            <div class="letter-title">HAPPY BOYFRIENDS DAY MY BABY</div>
+
+            <div class="letter-body">
+              <p>hey, happy boyfriends day babe. i know i dont say it enough but you're the best boyfriend in the entire world and i love you sooo much that i can never express in words.</p>
+
+              <p>you're the best thing that ever happend to me and i cannot express in words how much i am grateful for your presence in my life. you're the air i breathe, the water i need to survive, you're the light in my dark lonely world.</p>
+
+              <p>i know i can be annoying sometimes and moody also and may not tell you everything but you should know that even if i get distant at times you are the one that gives me hope and courage to go through everything that happens.</p>
+
+              <p>but i hope you will try to tell me everything because i'm always here for you no matter what through your evey high and low. i will never leave you no matter what. just so you know you were there for me through everything and i love you for every bit of it. you are sooo perfect to me that words could never express i hope you know that.</p>
+            </div>
+
+            <div class="signature">With all my love, your wifeyy 💗</div>
+          </div>
+        </section>
+
+        <section class="memory-section">
+          <h2 class="section-heading">Our little memories</h2>
+          <div class="memory-grid">
+            <figure class="polaroid tilt-left">
+              <div class="photo photo-one"></div>
+              <figcaption>our first smile</figcaption>
+            </figure>
+
+            <figure class="polaroid tilt-right">
+              <div class="photo photo-two"></div>
+              <figcaption>you + me = home</figcaption>
+            </figure>
+
+            <figure class="polaroid tilt-left">
+              <div class="photo photo-three"></div>
+              <figcaption>our favorite days</figcaption>
+            </figure>
+
+            <figure class="polaroid tilt-right">
+              <div class="photo photo-four"></div>
+              <figcaption>forever us</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="reasons-section">
+          <h2 class="section-heading">1000 reasons why I love you</h2>
+          <div class="reasons-box">
+            <ul id="loveReasons" class="reasons-list"></ul>
+          </div>
+        </section>
+
+        <section class="envelope-section">
+          <div class="envelope-wrap">
+            <div class="envelope" id="envelope">
+              <div class="flap"></div>
+              <div class="envelope-text">
+                <span>Open it baby</span>
+                <small>for a surprise</small>
+              </div>
+              <button id="openButton" class="open-button">Open It</button>
+            </div>
+
+            <div class="surprise-card">
+              <div class="surprise-inner">
+                <div class="surprise-grid">
+                  <div class="final-polaroid">
+                    <div class="final-photo"></div>
+                    <figcaption>My forever favorite person</figcaption>
+                  </div>
+
+                  <div class="surprise-message">
+                    <p>hey baby, i love you sooo much and i hope you know that no matter what happens, you are my favorite person in the whole world.</p>
+                    <p>you make my life softer, brighter, and happier just by existing. thank you for being the best boyfriend, the best support, and the best comfort to me.</p>
+                    <p>your smile is my peace and your love is my home. i am so lucky to have you and i will always choose you, always.</p>
+                    <p>happy boyfriends day tillu 💋💗</p>
+                  </div>
+                </div>
+
+                <div class="love-sign">I love you so much, my baby ❤️</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
