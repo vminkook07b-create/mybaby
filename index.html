@@ -40,69 +40,33 @@
           </div>
         </section>
 
-        <section class="memory-section">
-          <h2 class="section-heading">Our little memories</h2>
-          <div class="memory-grid">
-            <figure class="polaroid tilt-left">
-              <div class="photo photo-one"></div>
-              <figcaption>our first smile</figcaption>
-            </figure>
-
-            <figure class="polaroid tilt-right">
-              <div class="photo photo-two"></div>
-              <figcaption>you + me = home</figcaption>
-            </figure>
-
-            <figure class="polaroid tilt-left">
-              <div class="photo photo-three"></div>
-              <figcaption>our favorite days</figcaption>
-            </figure>
-
-            <figure class="polaroid tilt-right">
-              <div class="photo photo-four"></div>
-              <figcaption>forever us</figcaption>
-            </figure>
+        <section class="promises-section">
+          <h2 class="section-heading">My Promises to You</h2>
+          <div class="promises-container">
+            <ul id="promisesList" class="promises-list"></ul>
           </div>
+          <button class="continue-btn" onclick="scrollToNextSection()">Next ✨</button>
         </section>
 
-        <section class="reasons-section">
-          <h2 class="section-heading">1000 reasons why I love you</h2>
-          <div class="reasons-box">
-            <ul id="loveReasons" class="reasons-list"></ul>
+        <section class="tictac-section">
+          <h2 class="section-heading">Let's Play a Game 🎮</h2>
+          <p class="game-subtitle">If you win, you get all my love forever 💕</p>
+          <div class="tictac-wrapper">
+            <div class="tictac-board" id="tictacBoard"></div>
+            <button class="reset-btn" onclick="resetTicTac()">Play Again</button>
           </div>
+          <button class="continue-btn" onclick="scrollToNextSection()">Next ✨</button>
         </section>
 
-        <section class="envelope-section">
-          <div class="envelope-wrap">
-            <div class="envelope" id="envelope">
-              <div class="flap"></div>
-              <div class="envelope-text">
-                <span>Open it baby</span>
-                <small>for a surprise</small>
-              </div>
-              <button id="openButton" class="open-button">Open It</button>
-            </div>
-
-            <div class="surprise-card">
-              <div class="surprise-inner">
-                <div class="surprise-grid">
-                  <div class="final-polaroid">
-                    <div class="final-photo"></div>
-                    <figcaption>My forever favorite person</figcaption>
-                  </div>
-
-                  <div class="surprise-message">
-                    <p>hey baby, i love you sooo much and i hope you know that no matter what happens, you are my favorite person in the whole world.</p>
-                    <p>you make my life softer, brighter, and happier just by existing. thank you for being the best boyfriend, the best support, and the best comfort to me.</p>
-                    <p>your smile is my peace and your love is my home. i am so lucky to have you and i will always choose you, always.</p>
-                    <p>happy boyfriends day tillu 💋💗</p>
-                  </div>
-                </div>
-
-                <div class="love-sign">I love you so much, my baby ❤️</div>
-              </div>
-            </div>
+        <section class="heart-section">
+          <h2 class="section-heading">Fill My Heart With Love</h2>
+          <p class="heart-subtitle">Click the heart to fill it with all my love for you 💖</p>
+          <div class="heart-container">
+            <svg class="heart-svg" viewBox="0 0 100 100" id="heartSvg" onclick="fillHeart()">
+              <path class="heart-path" d="M50,90 C20,70 5,55 5,40 C5,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 95,25 95,40 C95,55 80,70 50,90 Z" />
+            </svg>
           </div>
+          <div class="heart-message" id="heartMessage"></div>
         </section>
       </main>
     </div>
